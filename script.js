@@ -180,6 +180,7 @@ async function fetchSearchWeatherInfo(city){
     loadingScreen.classList.add('active');
     userInfoContainer.classList.remove('active');
     grantAccessButton.classList.remove('active');
+    notFound.classList.remove('active');
 
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
